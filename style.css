@@ -1,0 +1,129 @@
+body {
+    background-color: #0f79b3e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#enter {
+padding-inline-end: 10px;
+}
+
+#result {
+    align-items: flex-end;
+    text-align: end;
+}
+
+.display {
+    flex: 1 1 0%;
+    padding-bottom: 10px;
+}
+
+
+.calculator {
+    padding: 5px;
+    padding-bottom: 25px;
+    border: 1px solid #5aaff5;
+    align-items: center;
+    background-color: #ecf3f5;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding-top: 25px;
+}
+
+.calculator input {
+    width: 277px;
+    margin: 0%;
+    border: none;
+    border-style: hidden;
+    border: 1px solid #c8e4fb;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 16px;
+    background-color: #c8e4fb;
+}
+
+.display{
+    padding: 5px;
+}
+
+.calculator button {
+    width: 48px;
+    height: 38px;
+    margin: 4px;
+    border: none;
+    background-color: #a5d1f6;
+    color: #333;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background-color: #c2d1dd;
+}
+
+#buttons{
+    background-color: #c8e4fb;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 35px;
+    padding-top: 15px;
+}
+#buttons:hover{
+    background-color:#c2d1dd ;
+}
+
+#buttons1{
+    background-color:#a5d1f6;
+    text-align: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+
+#buttons1:hover{
+    background-color: #c2d1dd;
+}
+
+#enterbutton{
+    background-color: #0f79b3e6;
+    padding-bottom: 35px;
+    padding-top: 15px;
+}
+
+.calculator table {
+    
+    padding: 5px;
+
+    border-collapse: collapse;
+
+
+}
+
+.calculator tr {
+    border-radius: 10px;
+}
+
+.calculator td {
+    padding: 2px;
+}
+
+.calculator td[colspan="2"] {
+    width: 50%;
+}
+
+.calculator td[rowspan="2"] {
+    height: 96px;
+}
+
+.calculator td[colspan="4"] {
+    text-align: center;
+}
+
+.calculator td[colspan="4"] button {
+    width: 100%;
+    border-radius: 8px;
+}

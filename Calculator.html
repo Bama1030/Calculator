@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator-Bapi Mandal</title>
+</head>
+
+<body>
+
+    <script>
+        function calculate() {
+
+            var inputField = document.getElementById('expression');
+            var expression = inputField.value;
+            try {
+                var result = eval(expression);
+                inputField.value = expression;
+                document.getElementById('res').innerHTML = result;
+            } catch (error) {
+                inputField.value = "Error: Invalid expression";
+            }
+        }
+
+        document.getElementById('expression').addEventListener('keyup', function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                calculate();
+            }
+        });
+
+        function buttonClick(value) {
+            document.getElementById('expression').value += value;
+        }
+
+        function clearInput() {
+            document.getElementById('res').innerHTML = "";
+            document.getElementById('expression').value = '';
+            document.getElementById('result').value = '';
+
+        }
+
+        function squareRoot() {
+            var expression = document.getElementById('expression').value;
+            var result = Math.sqrt(eval(expression));
+            document.getElementById('expression').value = expression;
+            document.getElementById('res').innerHTML = result;
+        }
+
+        function plusMinus() {
+            var expression = document.getElementById('expression').value;
+            var result = eval(expression) * -1;
+            document.getElementById('expression').value = expression;
+            document.getElementById('res').innerHTML = result;
+        }
+
+        function deleteLastCharacter() {
+            var expression = document.getElementById('expression').value;
+            document.getElementById('expression').value = expression.slice(0, -1);
+        }
+    </script>
+
+    <div>
+        <div class="calculator">
+            <div class="display">
+                <div id="input1">
+                    <div class="input">
+                        <input style="color: #1776a1; padding-left:10px; " type="text" id="expression" readonly> <br>
+                        <h1 style="background-color: #c8e4fb;width:100%;margin: 0;border-bottom-right-radius:5px;border-bottom-left-radius:5px;
+                        text-align: right;font-family:'Calibri';"><span style="color:#11313f;margin-right:5px;" id="res"></span></h1>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <table>
+                    <tr>
+                        <td><button onclick="buttonClick('(')" style="color: #1776a1;">(</button></td>
+                        <td><button onclick="buttonClick(')')" style="color: #1776a1">)</button></td>
+                        <td><button onclick="calculate()" style="color: #1776a1;">ans</button></td>
+                        <td><button onclick="deleteLastCharacter()" style="color: #1776a1">del</button></td>
+                        <td><button onclick="clearInput()" style="color: #1776a1">clear</button></td>
+                    </tr>
+                    <div>
+                        <tr id="table">
+                            <td><button id="buttons" onclick="buttonClick('7')" style="color: #11313f;font-family:'Calibri'">7</button></td>
+                            <td><button id="buttons" onclick="buttonClick('8')" style="color: #11313f;font-family:'Calibri'">8</button></td>
+                            <td><button id="buttons" onclick="buttonClick('9')" style="color: #11313f;font-family:'Calibri'">9</button></td>
+                            <td><button id="buttons1" onclick="buttonClick('%')" style="color: #1776a1">%</button></td>
+                            <td><button id="buttons1" onclick="squareRoot()" style="color: #1776a1">√</button></td>
+
+                        </tr>
+                        <tr id="table">
+                            <td><button id="buttons" onclick="buttonClick('4')" style="color: #11313f;font-family:'Calibri'">4</button></td>
+                            <td><button id="buttons" onclick="buttonClick('5')" style="color: #11313f;font-family:'Calibri'">5</button></td>
+                            <td><button id="buttons" onclick="buttonClick('6')" style="color: #11313f;font-family:'Calibri'">6</button></td>
+                            <td><button id="buttons1" onclick="buttonClick('*')" style="color: #1776a1">x</button></td>
+                            <td><button id="buttons1" onclick="buttonClick('/')" style="color: #1776a1">÷</button></td>
+                        </tr>
+                        <tr id="table">
+                            <td><button id="buttons" onclick="buttonClick('1')" style="color: #11313f;font-family:'Calibri'">1</button></td>
+                            <td><button id="buttons" onclick="buttonClick('2')" style="color: #11313f;font-family:'Calibri'">2</button></td>
+                            <td><button id="buttons" onclick="buttonClick('3')" style="color: #11313f;font-family:'Calibri'">3</button></td>
+                            <td><button id="buttons1" onclick="buttonClick('+')" style="color: #1776a1">+</button></td>
+                            <td><button id="buttons1" onclick="buttonClick('-')" style="color: #1776a1">-</button></td>
+                        </tr>
+                        <tr id="table">
+                            <td><button id="buttons1" onclick="buttonClick('.')" style="color: #1776a1;font-family:'Calibri'">.</button></td>
+                            <td><button id="buttons" onclick="buttonClick('0')" style="color: #11313f;font-family:'Calibri'">0</button></td>
+                            <td><button id="buttons1" onclick="plusMinus()" style="color: #1776a1">±</button></td>
+                            <td id="enter" colspan="4"><button id="enterbutton" onclick="calculate()"
+                                    style="color: white;font-family:'Calibri'">ENTER</button></td>
+
+                        </tr>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
