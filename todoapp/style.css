@@ -1,0 +1,138 @@
+.container {
+  max-width: 300px;
+  max-height: 135px;
+  padding: 15px;
+  margin-top: 20%;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: rgb(99, 248, 198);
+  display: block;
+
+}
+
+h3 {
+  color: white;
+}
+
+.body1 {
+  background-color: #0f79b3e6;
+}
+
+.container1 {
+  border-radius: 10px;
+  width: 290px;
+  margin-top: 16%;
+  margin-bottom: 0%;
+  border: none;
+  display: inline-block;
+}
+
+.container2 {
+  display: flex;
+  width: 300px;
+}
+
+.conth {
+  border-radius: 5px;
+  display: flex;
+}
+
+.det {
+  margin-left: 235%;
+}
+
+
+input {
+  margin-right: 20px;
+  align-content: center;
+  border: #ccc;
+}
+
+.main1 {
+  display: flex;
+  padding-left: 0%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  margin: -0.8%;
+  padding-top: 5px;
+  background-color: white;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: medium;
+}
+
+input[type="text"] {
+  width: 95%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 40%;
+  margin-left: 10%;
+  display: block;
+  border: #1fcc10;
+  border-radius: 5%;
+  padding: 5px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: #1fcc10;
+
+}
+
+#addButton {
+  color: white;
+}
+
+button[type="text"] {
+  width: 95%;
+  background-color: #ccc;
+}
+
+.list {
+  margin-top: 0%;
+  padding-left: 5%;
+  border-radius: 15px;
+  background-color: #e8e5e5;
+  display: block;
+}
+
+ol {
+  overflow: hidden;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+li span {
+  flex-grow: 0;
+  margin-top: 0%;
+}
+
+li button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
